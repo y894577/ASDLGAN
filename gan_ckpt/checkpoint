@@ -1,0 +1,6 @@
+model_checkpoint_path: "E:\\QQfile\\DCGAN\\gan_ckpt\\gan.ckpt"
+all_model_checkpoint_paths: "E:\\QQfile\\DCGAN\\gan_ckpt_all\\gan.ckpt560"
+all_model_checkpoint_paths: "E:\\QQfile\\DCGAN\\gan_ckpt_all\\gan.ckpt565"
+all_model_checkpoint_paths: "E:\\QQfile\\DCGAN\\gan_ckpt_all\\gan.ckpt570"
+all_model_checkpoint_paths: "E:\\QQfile\\DCGAN\\gan_ckpt_all\\gan.ckpt575"
+all_model_checkpoint_paths: "E:\\QQfile\\DCGAN\\gan_ckpt\\gan.ckpt"
