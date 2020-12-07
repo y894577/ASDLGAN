@@ -1,0 +1,2 @@
+model_checkpoint_path: "E:\\QQfile\\DCGAN\\testdata\\tes_ckpt\\tes.ckpt"
+all_model_checkpoint_paths: "E:\\QQfile\\DCGAN\\testdata\\tes_ckpt\\tes.ckpt"

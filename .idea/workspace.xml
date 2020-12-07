@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2a0cb05-3ac8-4bd1-8d53-fb9d6b66b4e7" name="Default Changelist" comment="" />
+    <list default="true" id="f2a0cb05-3ac8-4bd1-8d53-fb9d6b66b4e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gauss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/wrf_generator.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +20,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1U6ExsrmFA379eZQcjAEAsUKem2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,6 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -30,36 +46,17 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\QQfile\DCGAN" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\python\DCGAN-for-Steganography-master\7486" />
     </key>
   </component>
   <component name="RunManager" selected="Python.gan_train">
-    <configuration name="SSIM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DCGAN-for-Steganography-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="D:\anaconda\conda\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="F:/python/DCGAN-for-Steganography-master/7486/SSIM.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="gan_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DCGAN-for-Steganography-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,6 +71,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gan_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gauss" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DCGAN-for-Steganography-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gauss.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,6 +123,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DCGAN-for-Steganography-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DCGAN-for-Steganography-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,42 +167,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="wrf_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DCGAN-for-Steganography-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wrf_generator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.gan_train" />
-      <item itemvalue="Python.SSIM" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.wrf_generator" />
       <item itemvalue="Python.gen_records" />
+      <item itemvalue="Python.tes" />
+      <item itemvalue="Python.gauss" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.gan_train" />
+        <item itemvalue="Python.gauss" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.tes" />
         <item itemvalue="Python.gen_records" />
-        <item itemvalue="Python.wrf_generator" />
-        <item itemvalue="Python.SSIM" />
       </list>
     </recent_temporary>
   </component>
@@ -213,18 +232,33 @@
       <workItem from="1606701863455" duration="599000" />
       <workItem from="1606722389778" duration="16426000" />
       <workItem from="1606782574507" duration="2629000" />
-      <workItem from="1606812868818" duration="8344000" />
+      <workItem from="1606812868818" duration="12999000" />
+      <workItem from="1606884010729" duration="605000" />
+      <workItem from="1606903599552" duration="8279000" />
+      <workItem from="1606976331820" duration="9392000" />
+      <workItem from="1607056636837" duration="5455000" />
+      <workItem from="1607133191393" duration="12940000" />
+      <workItem from="1607176663229" duration="2962000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/ASDL-GAN" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="225" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606735928016">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="225" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1606735928016" />
+    <state x="414" y="0" key="CommitChangelistDialog2" timestamp="1606825540000">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="414" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606825540000" />
     <state x="504" y="165" key="EnvironmentVariablesDialog" timestamp="1606654944674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -233,22 +267,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606655774486" />
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom" timestamp="1606818860183">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607156812524">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606818860183" />
-    <state width="1493" height="192" key="GridCell.Tab.0.center" timestamp="1606818860183">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607156812524" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607156812524">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606818860183" />
-    <state width="1493" height="192" key="GridCell.Tab.0.left" timestamp="1606818860183">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607156812524" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607156812524">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606818860183" />
-    <state width="1493" height="192" key="GridCell.Tab.0.right" timestamp="1606818860183">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607156812524" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607156812524">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606818860183" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607156812524" />
     <state x="0" y="563" width="1464" height="232" key="GridCell.Tab.1.bottom" timestamp="1606798111362">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -281,10 +315,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="563" width="1464" height="232" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1606798111361" />
-    <state x="286" y="56" key="SettingsEditor" timestamp="1606743094607">
+    <state x="286" y="56" key="SettingsEditor" timestamp="1607146667972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="286" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606743094607" />
+    <state x="286" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607146667972" />
+    <state x="362" y="142" key="Vcs.Push.Dialog.v2" timestamp="1607346847704">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="362" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607346847704" />
     <state x="-162" y="526" width="1476" height="292" key="dock-window-1" timestamp="1606798014839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -334,8 +372,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DCGAN$gen_records.coverage" NAME="gen_records Coverage Results" MODIFIED="1606732550525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DCGAN$gauss.coverage" NAME="gauss Coverage Results" MODIFIED="1607156099268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DCGAN$wrf_generator.coverage" NAME="wrf_generator Coverage Results" MODIFIED="1599993596338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DCGAN$test.coverage" NAME="test Coverage Results" MODIFIED="1606747113355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DCGAN$gan_train.coverage" NAME="gan_train Coverage Results" MODIFIED="1606818860175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DCGAN$test.coverage" NAME="test Coverage Results" MODIFIED="1607155738846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DCGAN$gan_train.coverage" NAME="gan_train Coverage Results" MODIFIED="1607156812519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DCGAN$tes.coverage" NAME="tes Coverage Results" MODIFIED="1607154437290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

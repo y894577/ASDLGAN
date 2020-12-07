@@ -1,11 +1,11 @@
 # this code is used to train a network which can simulate +-1 embedding
-
+from PIL import Image
 import tensorflow as tf
 import numpy as np
 import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ["CUDA_VISIBLE_DEVICES"] = '0'
+os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 
 
 def fc(input, output_size, name, stddev=1.0, reuse=False):
@@ -19,26 +19,24 @@ def fc(input, output_size, name, stddev=1.0, reuse=False):
         return tf.matmul(input, weights) + bias
 
 
-def nn(x, num_nerous):
-    num_nerous = 10
-
+def nn(x, num_nerous=10):
     # 第一个子网络，共四层，激活函数均使用sigmoid
-    n1_out1 = tf.nn.sigmoid(fc(x, num_nerous, 'n1_layer1'), name='n1_out1')
+    n1_out1 = tf.nn.tanh(fc(x, num_nerous, 'n1_layer1'), name='n1_out1')
     n1_out1 -= 0.5
 
-    n1_out2 = tf.nn.sigmoid(fc(n1_out1, num_nerous, 'n1_layer2'), name='n1_out2')
+    n1_out2 = tf.nn.tanh(fc(n1_out1, num_nerous, 'n1_layer2'), name='n1_out2')
     n1_out2 -= 0.5
 
-    n1_out3 = tf.nn.sigmoid(fc(n1_out2, 1, 'n1_layer3'), name='n1_out3')
+    n1_out3 = tf.nn.tanh(fc(n1_out2, 1, 'n1_layer3'), name='n1_out3')
 
     # 第二个子网络，共四层，激活函数均使用sigmoid
-    n2_out1 = tf.nn.sigmoid(fc(x, num_nerous, 'n2_layer1'), name='n2_out1')
+    n2_out1 = tf.nn.tanh(fc(x, num_nerous, 'n2_layer1'), name='n2_out1')
     n2_out1 -= 0.5
 
-    n2_out2 = tf.nn.sigmoid(fc(n2_out1, num_nerous, 'n2_layer2'), name='n2_out2')
+    n2_out2 = tf.nn.tanh(fc(n2_out1, num_nerous, 'n2_layer2'), name='n2_out2')
     n2_out2 -= 0.5
 
-    n2_out3 = tf.nn.sigmoid(fc(n2_out2, 1, 'n2_layer3'), name='n2_out3')
+    n2_out3 = tf.nn.tanh(fc(n2_out2, 1, 'n2_layer3'), name='n2_out3')
     n2_out3 -= 1
 
     return n1_out3 + n2_out3
@@ -61,13 +59,13 @@ def tes_train(input=None, mode='train'):
 
     # 最终预测将两个子网络的输出加起来
     pred_y = nn(x, 10)
-    if (mode == 'test'):
+    if mode == 'test':
         saver = tf.train.Saver()
         init = tf.global_variables_initializer()
 
         with tf.Session() as sess:
             sess.run(init)
-            saver.restore(sess, os.getcwd() + '\\tes_ckpt\\tes.ckpt')
+            saver.restore(sess, os.getcwd() + '\\testdata\\tes_ckpt\\tes.ckpt')
 
             x_trn = input  # np.random.uniform(size=[1000,2])
             y_trn = get_y(x_trn)
@@ -85,13 +83,14 @@ def tes_train(input=None, mode='train'):
     saver = tf.train.Saver()
 
     init = tf.global_variables_initializer()
-    if (mode == 'train'):
+    if mode == 'train':
         with tf.Session() as sess:
             sess.run(init)
-            saver.restore(sess, os.getcwd() + '\\tes_ckpt\\tes.ckpt')
+            # saver.restore(sess, os.getcwd() + '\\testdata\\tes_ckpt\\tes.ckpt')
             Loss = 0
-            for step in range(10000000):
-                x_trn = np.random.uniform(size=[1000, 2])
+            for step in range(100000):
+                # x_trn = np.random.uniform(size=[1000, 2])
+                x_trn = input
                 # 计算真实值，:,0 is p :,1 is rand
                 # 0.1 0.9
                 y_trn = get_y(x_trn)
@@ -105,14 +104,14 @@ def tes_train(input=None, mode='train'):
                 LOSS, _, pred = sess.run([loss, train, pred_y],
                                          feed_dict={x: x_trn, y: y_trn})  # 每次迭代的数据都是全部随机的[1000,2]
                 Loss += LOSS
-                if (step % 1000 == 0):
+                if step % 1000 == 0:
                     print('step%d' % step, Loss / 1000)
                     Loss = 0
-            save_path = saver.save(sess, os.getcwd() + '\\tes_ckpt\\tes.ckpt')
+            saver.save(sess, os.getcwd() + '\\testdata\\tes_ckpt\\tes.ckpt')
     else:
         with tf.Session() as sess:
             sess.run(init)
-            saver.restore(sess, os.getcwd() + '\\tes_ckpt\\tes.ckpt')
+            saver.restore(sess, os.getcwd() + '\\testdata\\tes_ckpt\\tes.ckpt')
 
             dict = {}
             for i in range(1, 3):
@@ -124,7 +123,7 @@ def tes_train(input=None, mode='train'):
                         dict['n%d_layer%d' % (i, j)]['w'] = (sess.run(weights)).tolist()
                         dict['n%d_layer%d' % (i, j)]['b'] = (sess.run(bias)).tolist()
 
-            f = open('tes_ckpt/weights.txt', 'w')
+            f = open('testdata/tes_ckpt/weights.txt', 'w')
             f.write(str(dict))
             f.close()
             print('weight saved')
@@ -136,8 +135,22 @@ def tes_train(input=None, mode='train'):
 
 # tes_train(None, '1')
 
-test = np.random.uniform(size=[100, 2])
-tes_train(test, 'test')
+def gauss_random():
+    A = np.loadtxt('array.txt', delimiter=',')
+
+    img = Image.open('资源 407 (2).png')
+    new_img = img.convert('L')
+    B = np.array(new_img)
+
+    mat = np.matmul(A, B) % 256
+
+    mat = mat.reshape([-1, 2])
+    return mat / 256
+
+
+# test = np.random.uniform(size=[1000, 2])
+test = gauss_random()
+tes_train(test, 'train')
 
 y = get_y(test)
 print(y, np.sum(y))

@@ -192,7 +192,7 @@ class WrfGenerator(object):
 
     def _set_tes_weights(self):
         # 加载TES
-        f = open('tes_ckpt/weights.txt', 'r')
+        f = open('testdata/tes_ckpt/weights.txt', 'r')
         a = f.read()
         dict = eval(a)
         f.close()
@@ -208,16 +208,18 @@ class WrfGenerator(object):
     def _tes(self, x):
         with tf.variable_scope('tes', reuse=True):
             n1 = x
-            n2 = x
+            n2 = self.gauss_random()
+            print(n1.shape)
+            print(n2.shape)
             for j in range(1, 4):
-                with tf.compat.v1.variable_scope('n1_layer%d' % j, reuse=True):
-                    weights = tf.compat.v1.get_variable(name='weight')
+                with tf.variable_scope('n1_layer%d' % j, reuse=True):
+                    weights = tf.get_variable(name='weight')
                     bias = tf.get_variable(name='bias')
                     n1 = tf.nn.sigmoid(tf.matmul(n1, weights) + bias)
                     if j < 3:
                         n1 -= 0.5
             for j in range(1, 4):
-                with tf.compat.v1.variable_scope('n2_layer%d' % j, reuse=True):
+                with tf.variable_scope('n2_layer%d' % j, reuse=True):
                     weights = tf.get_variable(name='weight')
                     bias = tf.get_variable(name='bias')
                     n2 = tf.nn.sigmoid(tf.matmul(n2, weights) + bias)
@@ -226,3 +228,18 @@ class WrfGenerator(object):
                     else:
                         n2 -= 1
             return n1 + n2
+
+    def gauss_random(self):
+        A = np.loadtxt('array.txt', delimiter=',')
+
+        img = Image.open('资源 407 (2).png')
+        new_img = img.convert('L')
+        B = np.array(new_img)
+
+        mat = np.matmul(A, B) % 256
+
+        mat = np.tile(mat, (8, 16))
+        print(mat.shape)
+
+        mat = mat.reshape([-1, 2]).astype(np.float32)
+        return mat / 256
